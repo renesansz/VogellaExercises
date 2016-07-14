@@ -28,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(i, REQUEST_CODE);
     }
 
+    public void shareData(View view) {
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, "This is awesome share sheet!!");
+
+        startActivity(sharingIntent);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

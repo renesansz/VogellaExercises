@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="60dip"
+        android:hint="Enter any value"
         android:text="First Activity"
         android:textSize="20sp"/>
     <Button
@@ -24,4 +25,11 @@
         android:layout_below="@id/inputForIntent"
         android:onClick="onClick"
         android:text="Calling an intent"/>
+    <Button
+        android:layout_below="@id/inputForIntent"
+        android:layout_toRightOf="@id/startIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="shareData"
+        android:text="Share" />
 </RelativeLayout>
