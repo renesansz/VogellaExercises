@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Test App</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello World!</string>
+
+    <string-array name="operation_systems">
+        <item>Ubuntu</item>
+        <item>Android</item>
+        <item>Microsoft Windows</item>
+    </string-array>
+
+    <color name="red">#FFFF0000</color>
+
+    <dimen name="my_margin">10dp</dimen>
+</resources>

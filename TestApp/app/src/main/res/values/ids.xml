@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Layouts -->
+    <item name="GridLayout1" type="id" />
+
+    <!-- Buttons -->
+    <item name="btnSettings" type="id" />
+    <item name="btnLogin" type="id" />
+
+    <!-- Texts -->
+    <item name="txtAppName" type="id" />
+
+    <!-- Input Text -->
+    <item name="inputUser" type="id"></item>
+    <item name="inputPass" type="id"></item>
+
+    <!-- Input Group -->
+    <item name="orientation" type="id" />
+    <item name="horizontal" type="id" />
+    <item name="vertical" type="id" />
+
+</resources>
