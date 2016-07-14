@@ -26,10 +26,18 @@
         android:onClick="onClick"
         android:text="Calling an intent"/>
     <Button
+        android:id="@+id/share"
         android:layout_below="@id/inputForIntent"
         android:layout_toRightOf="@id/startIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="shareData"
         android:text="Share" />
+    <Button
+        android:layout_below="@id/inputForIntent"
+        android:layout_toRightOf="@id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openBrowser"
+        android:text="Open Browser" />
 </RelativeLayout>

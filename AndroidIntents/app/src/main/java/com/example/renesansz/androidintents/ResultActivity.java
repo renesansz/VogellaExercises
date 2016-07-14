@@ -1,7 +1,6 @@
 package com.example.renesansz.androidintents;
 
 import android.app.Activity;
-import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
