@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 stream = getContentResolver().openInputStream(data.getData());
                 bitmap = BitmapFactory.decodeStream(stream);
+                imageView.setImageBitmap(bitmap);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } finally {
