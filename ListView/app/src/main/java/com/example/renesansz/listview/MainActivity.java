@@ -19,7 +19,7 @@ public class MainActivity extends ListActivity{
                 "Windows 7", "Mac OSX", "Linux", "OS/2"
         };
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.rowlayout, R.id.label, values);
 
         setListAdapter(adapter);
     }
