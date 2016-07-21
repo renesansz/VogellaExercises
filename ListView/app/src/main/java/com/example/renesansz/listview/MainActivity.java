@@ -3,7 +3,6 @@ package com.example.renesansz.listview;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,8 +18,10 @@ public class MainActivity extends ListActivity{
                 "Windows 7", "Mac OSX", "Linux", "OS/2"
         };
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.rowlayout, R.id.label, values);
+        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.rowlayout, R.id.label, values);
 
+        MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, values);
+        
         setListAdapter(adapter);
     }
 
