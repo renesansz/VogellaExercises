@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:baselineAligned="false"
+    android:padding="15dp"
     android:orientation="horizontal" >
 
     <fragment
+        android:name="com.example.renesansz.multipanefragments.MyListFragment"
         android:id="@+id/listFragment"
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -14,6 +15,7 @@
         tools:layout="@layout/fragment_rsslist_overview">
     </fragment>
     <fragment
+        android:name="com.example.renesansz.multipanefragments.DetailFragment"
         android:id="@+id/detailFragment"
         android:layout_width="0dp"
         android:layout_weight="2"

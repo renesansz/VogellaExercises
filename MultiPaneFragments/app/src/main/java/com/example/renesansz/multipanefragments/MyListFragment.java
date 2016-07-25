@@ -2,8 +2,8 @@ package com.example.renesansz.multipanefragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +13,8 @@ public class MyListFragment extends Fragment {
 
     private OnItemSelectedListener listener;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_rsslist_overview, container, false);
         Button button = (Button) view.findViewById(R.id.updateButton);
 
@@ -36,6 +35,7 @@ public class MyListFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        Log.d("Renesansz", "On Attach!!");
         if (context instanceof OnItemSelectedListener) {
             listener = (OnItemSelectedListener) context;
         } else {
@@ -44,6 +44,7 @@ public class MyListFragment extends Fragment {
     }
 
     public void updateDetail(String uri) {
+        Log.d("Renesansz", "updateDetail() " + uri);
         String newTime = String.valueOf(System.currentTimeMillis());
         listener.onRssItemSelected(newTime);
     }
