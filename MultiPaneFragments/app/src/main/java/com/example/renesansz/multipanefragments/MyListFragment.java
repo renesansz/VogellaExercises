@@ -16,8 +16,8 @@ public class MyListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_rsslist_overview, container, false);
-        Button button = (Button) view.findViewById(R.id.updateButton);
 
+        Button button = (Button) view.findViewById(R.id.updateButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
