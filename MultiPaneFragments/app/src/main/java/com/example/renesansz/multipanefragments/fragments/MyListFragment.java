@@ -1,35 +1,32 @@
-package com.example.renesansz.multipanefragments;
+package com.example.renesansz.multipanefragments.fragments;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+import com.example.renesansz.multipanefragments.R;
+import com.example.renesansz.rssfeedlibrary.RssItem;
 
 public class MyListFragment extends Fragment {
 
     private OnItemSelectedListener listener;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_rsslist_overview, container, false);
-
-        Button button = (Button) view.findViewById(R.id.updateButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateDetail("fake");
-            }
-        });
-
-        return view;
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v= null;
+        v = LayoutInflater.
+                from(parent.getContext()).
+                inflate(R.layout.rowlayout, parent, false);
+        return new RecyclerView.ViewHolder(v);
     }
 
     public interface OnItemSelectedListener {
         void onRssItemSelected(String link);
+        void goToActionMode(RssItem item);
     }
 
     @Override
@@ -48,4 +45,9 @@ public class MyListFragment extends Fragment {
         String newTime = String.valueOf(System.currentTimeMillis());
         listener.onRssItemSelected(newTime);
     }
+
+    public void goToActionMode(RssItem item) {
+        listener.goToActionMode(item);
+    }
+
 }

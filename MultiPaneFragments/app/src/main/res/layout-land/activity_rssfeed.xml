@@ -7,7 +7,7 @@ android:padding="15dp"
 android:orientation="horizontal">
 
     <fragment
-        android:name="com.example.renesansz.multipanefragments.MyListFragment"
+        android:name="com.example.renesansz.multipanefragments.fragments.MyListFragment"
         android:id="@+id/listFragment"
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -15,7 +15,7 @@ android:orientation="horizontal">
         tools:layout="@layout/fragment_rsslist_overview">
     </fragment>
     <fragment
-        android:name="com.example.renesansz.multipanefragments.DetailFragment"
+        android:name="com.example.renesansz.multipanefragments.fragments.DetailFragment"
         android:id="@+id/detailFragment"
         android:layout_width="0dp"
         android:layout_weight="2"
