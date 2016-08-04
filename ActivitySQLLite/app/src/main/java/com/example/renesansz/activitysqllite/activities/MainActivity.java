@@ -27,7 +27,7 @@ public class MainActivity extends ListActivity {
         List<Comment> values = dataSource.getAllComments();
 
         // Use the SimpleCursorAdapter to show the elements in a ListView
-        ArrayAdapter<Comment> adapter = new ArrayAdapter<Comment>(this, R.layout.activity_main, values);
+        ArrayAdapter<Comment> adapter = new ArrayAdapter<Comment>(this, R.layout.simple_list_item_1, values);
         setListAdapter(adapter);
     }
 
